@@ -1,0 +1,18 @@
+# Build e binários
+bin/
+obj/
+
+# Arquivos do Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Cache
+*.cache
+*.log
+
+# Dados temporários do Windows Forms
+*.resx
+*.vsix
