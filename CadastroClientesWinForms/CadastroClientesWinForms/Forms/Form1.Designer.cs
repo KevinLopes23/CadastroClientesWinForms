@@ -32,12 +32,16 @@
             txtNome = new TextBox();
             txtTelefone = new TextBox();
             txtEmail = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
+            dtNascimento = new DateTimePicker();
             dgvClientes = new DataGridView();
             btnSalvar = new Button();
             btnEditar = new Button();
             BtnExcluir = new Button();
             contextMenuStrip1 = new ContextMenuStrip(components);
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvClientes).BeginInit();
             SuspendLayout();
             // 
@@ -62,12 +66,12 @@
             txtEmail.Size = new Size(279, 23);
             txtEmail.TabIndex = 3;
             // 
-            // dateTimePicker1
+            // dtNascimento
             // 
-            dateTimePicker1.Location = new Point(428, 171);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(279, 23);
-            dateTimePicker1.TabIndex = 4;
+            dtNascimento.Location = new Point(428, 171);
+            dtNascimento.Name = "dtNascimento";
+            dtNascimento.Size = new Size(279, 23);
+            dtNascimento.TabIndex = 4;
             // 
             // dgvClientes
             // 
@@ -76,6 +80,7 @@
             dgvClientes.Name = "dgvClientes";
             dgvClientes.Size = new Size(643, 187);
             dgvClientes.TabIndex = 5;
+            dgvClientes.CellClick += dgvClientes_CellClick;
             // 
             // btnSalvar
             // 
@@ -83,8 +88,9 @@
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(75, 23);
             btnSalvar.TabIndex = 6;
-            btnSalvar.Text = "button1";
+            btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // btnEditar
             // 
@@ -92,7 +98,7 @@
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(75, 23);
             btnEditar.TabIndex = 7;
-            btnEditar.Text = "button2";
+            btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
             // 
             // BtnExcluir
@@ -101,24 +107,65 @@
             BtnExcluir.Name = "BtnExcluir";
             BtnExcluir.Size = new Size(75, 23);
             BtnExcluir.TabIndex = 8;
-            BtnExcluir.Text = "button3";
+            BtnExcluir.Text = "Excluir";
             BtnExcluir.UseVisualStyleBackColor = true;
+            BtnExcluir.Click += BtnExcluir_Click;
             // 
             // contextMenuStrip1
             // 
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(64, 46);
+            label1.Name = "label1";
+            label1.Size = new Size(40, 15);
+            label1.TabIndex = 9;
+            label1.Text = "Nome";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(428, 46);
+            label2.Name = "label2";
+            label2.Size = new Size(36, 15);
+            label2.TabIndex = 10;
+            label2.Text = "Email";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(64, 143);
+            label3.Name = "label3";
+            label3.Size = new Size(52, 15);
+            label3.TabIndex = 11;
+            label3.Text = "Telefone";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(428, 143);
+            label4.Name = "label4";
+            label4.Size = new Size(31, 15);
+            label4.TabIndex = 12;
+            label4.Text = "Data";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(BtnExcluir);
             Controls.Add(btnEditar);
             Controls.Add(btnSalvar);
             Controls.Add(dgvClientes);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dtNascimento);
             Controls.Add(txtEmail);
             Controls.Add(txtTelefone);
             Controls.Add(txtNome);
@@ -135,11 +182,15 @@
         private TextBox txtNome;
         private TextBox txtTelefone;
         private TextBox txtEmail;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtNascimento;
         private DataGridView dgvClientes;
         private Button btnSalvar;
         private Button btnEditar;
         private Button BtnExcluir;
         private ContextMenuStrip contextMenuStrip1;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
     }
 }
